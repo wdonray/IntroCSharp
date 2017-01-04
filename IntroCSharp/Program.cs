@@ -65,16 +65,15 @@ namespace IntroCSharp
             var donray = new Student();
             List<Student> students = new List<Student>();
             
-            for (int i = 1; i < 11; i++)
+            for (int i = 1; i < 12; i++)
             {
                 students.Add(new Student("work", "white", "N/A", i, true));
-
             }
 
-            var teacher = new Dude();
-            students.ForEach(x => x.Attack(teacher));
+           // var teacher = new Dude();
+            //students.ForEach(x => x.Attack(teacher));
 
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 12; i++)
             {
                 Console.WriteLine(students[i].age);
             }
