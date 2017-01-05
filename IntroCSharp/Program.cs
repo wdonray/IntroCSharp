@@ -6,9 +6,62 @@ using System.Threading.Tasks;
 
 namespace IntroCSharp
 {
+    class Entity
+    {
+        public Entity() { }
+
+        public Entity(int h, int att)
+        {
+            health = h;
+            attackpower = att;
+        }
+        private int health, attackpower;
+        protected int Health
+        {
+            get { return health; }
+        }
+        protected int AttackPower
+        {
+            get { return attackpower; }
+        }
+        private string name;
+        public string Name
+        {
+            get { return name; }
+        }
+
+        public virtual bool Attack(Entity d)
+        {
+            d.health -= attackpower;
+            return true;
+        }
+    }
+    class Player : Entity
+    {
+        public Player() { }
+        public Player(int h, int att) : base(h, att) { }
+        public override bool Attack(Entity d)
+        {
+            return base. Attack(d);
+        }
+        public bool Defend()
+        {
+            return true;
+        }
+    }
+    class Zombie : Entity
+    {
+        public Zombie() { }
+        public Zombie(int h, int att) : base(h, att) { }
+        public override bool Attack(Entity d)
+        {
+            return base.Attack(d);
+        }
+
+    }
     class Dude
     {
-        public Dude(){}
+        public Dude() { }
         public void Attack(Dude d)
         {
             Console.WriteLine("attack" + d.ToString());
@@ -30,7 +83,8 @@ namespace IntroCSharp
         public bool m_trash;
         public void Work()
         {
-            Console.Write(m_name, " is currently working");
+            Console.Write(m_name);
+            Console.WriteLine(" is currently working");
         }
         public int age
         {
@@ -62,31 +116,12 @@ namespace IntroCSharp
     {
         static void Main(string[] args)
         {
-            var donray = new Student();
-            List<Student> students = new List<Student>();
-            
-            for (int i = 1; i < 12; i++)
+            Zombie z = new Zombie(10, 2);
+            Player p = new Player(14, 3);
+            for (int i = 0; i < 5; i++)
             {
-                students.Add(new Student("work", "white", "N/A", i, true));
+                z.Attack(p);
             }
-
-           // var teacher = new Dude();
-            //students.ForEach(x => x.Attack(teacher));
-
-            for (int i = 0; i < 12; i++)
-            {
-                Console.WriteLine(students[i].age);
-            }
-            //donray.age = 19;
-            //donray.m_name = "Donray";
-            //donray.m_gender = "Male";
-            //donray.m_race = "Black";
-            //donray.m_trash = true;
-            //Console.WriteLine(donray.name);
-            //Console.WriteLine(donray.age);
-            //Console.WriteLine(donray.gender);
-            //Console.WriteLine(donray.ethnicity);
-            //Console.WriteLine(donray.trash);
             Console.Read();
         }
     }
