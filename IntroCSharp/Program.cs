@@ -8,6 +8,7 @@ namespace IntroCSharp
 {
     class Entity
     {
+		//&========D YEAH BOI
         public Entity() { }
 
         public Entity(int h, int att)
@@ -28,6 +29,7 @@ namespace IntroCSharp
         public string Name
         {
             get { return name; }
+            set { name = value; }
         }
 
         public virtual bool Attack(Entity d)
@@ -57,7 +59,6 @@ namespace IntroCSharp
         {
             return base.Attack(d);
         }
-
     }
     class Dude
     {
@@ -118,10 +119,12 @@ namespace IntroCSharp
         {
             Zombie z = new Zombie(10, 2);
             Player p = new Player(14, 3);
+			Player Donray = new Player(0,0);
             for (int i = 0; i < 5; i++)
             {
                 z.Attack(p);
             }
+            p.Name = "Cuck";
             Console.Read();
         }
     }

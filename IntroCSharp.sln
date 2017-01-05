@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntroCSharp", "IntroCSharp\IntroCSharp.csproj", "{DF2B12D5-BE48-42A3-9802-C016899700D2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Morning Gist", "Morning Gist\Morning Gist.csproj", "{79E5D428-FF76-4DD5-93A1-BC4C80C4F641}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C++ Problems", "C++ Problems\C++ Problems.csproj", "{D07E324E-FAF0-4298-AF3C-6D2F673C4946}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{DF2B12D5-BE48-42A3-9802-C016899700D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF2B12D5-BE48-42A3-9802-C016899700D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF2B12D5-BE48-42A3-9802-C016899700D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79E5D428-FF76-4DD5-93A1-BC4C80C4F641}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79E5D428-FF76-4DD5-93A1-BC4C80C4F641}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79E5D428-FF76-4DD5-93A1-BC4C80C4F641}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79E5D428-FF76-4DD5-93A1-BC4C80C4F641}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D07E324E-FAF0-4298-AF3C-6D2F673C4946}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D07E324E-FAF0-4298-AF3C-6D2F673C4946}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D07E324E-FAF0-4298-AF3C-6D2F673C4946}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D07E324E-FAF0-4298-AF3C-6D2F673C4946}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
