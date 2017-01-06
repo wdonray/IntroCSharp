@@ -106,5 +106,10 @@ namespace Dice_Roll_Win
         {
 
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
