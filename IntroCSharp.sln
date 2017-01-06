@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntroCSharp", "IntroCSharp\IntroCSharp.csproj", "{DF2B12D5-BE48-42A3-9802-C016899700D2}"
 EndProject
@@ -11,9 +11,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C++ Problems", "C++ Problem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPS", "RPS\RPS.csproj", "{D8B2B335-5BD6-4D4A-98F8-31C5518367AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dice Roll Win", "Dice Roll Win\Dice Roll Win.csproj", "{40A3E4FD-3F8E-4521-91C2-5C19A68F824D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dice Roll", "Dice Roll\Dice Roll.csproj", "{0C8A822C-85B0-4599-959E-D78BECD953E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coin Flip", "Coin Flip\Coin Flip.csproj", "{BCFA6768-E89B-499D-9654-BE8C6A6DBC85}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dice Roll Win", "Dice Roll Win\Dice Roll Win.csproj", "{40A3E4FD-3F8E-4521-91C2-5C19A68F824D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,14 +37,14 @@ Global
 		{D8B2B335-5BD6-4D4A-98F8-31C5518367AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8B2B335-5BD6-4D4A-98F8-31C5518367AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8B2B335-5BD6-4D4A-98F8-31C5518367AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C8A822C-85B0-4599-959E-D78BECD953E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C8A822C-85B0-4599-959E-D78BECD953E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C8A822C-85B0-4599-959E-D78BECD953E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C8A822C-85B0-4599-959E-D78BECD953E0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{40A3E4FD-3F8E-4521-91C2-5C19A68F824D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{40A3E4FD-3F8E-4521-91C2-5C19A68F824D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40A3E4FD-3F8E-4521-91C2-5C19A68F824D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40A3E4FD-3F8E-4521-91C2-5C19A68F824D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BCFA6768-E89B-499D-9654-BE8C6A6DBC85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BCFA6768-E89B-499D-9654-BE8C6A6DBC85}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BCFA6768-E89B-499D-9654-BE8C6A6DBC85}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BCFA6768-E89B-499D-9654-BE8C6A6DBC85}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
