@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntroCSharp", "IntroCSharp\IntroCSharp.csproj", "{DF2B12D5-BE48-42A3-9802-C016899700D2}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dice Roll Win", "Dice Roll Win\Dice Roll Win.csproj", "{40A3E4FD-3F8E-4521-91C2-5C19A68F824D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coin Flip", "Coin Flip\Coin Flip.csproj", "{BCFA6768-E89B-499D-9654-BE8C6A6DBC85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recersive Function", "Recersive Function\Recersive Function.csproj", "{64CB0832-7230-4CCE-A7C7-73FE8452EA65}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{BCFA6768-E89B-499D-9654-BE8C6A6DBC85}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCFA6768-E89B-499D-9654-BE8C6A6DBC85}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCFA6768-E89B-499D-9654-BE8C6A6DBC85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64CB0832-7230-4CCE-A7C7-73FE8452EA65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64CB0832-7230-4CCE-A7C7-73FE8452EA65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64CB0832-7230-4CCE-A7C7-73FE8452EA65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64CB0832-7230-4CCE-A7C7-73FE8452EA65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
