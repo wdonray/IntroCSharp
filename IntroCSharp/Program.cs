@@ -8,6 +8,7 @@ namespace IntroCSharp
 {
     class Entity
     {
+		//&========D YEAH BOI
         public Entity() { }
 
         public Entity(int h, int att)
