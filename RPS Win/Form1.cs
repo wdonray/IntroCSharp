@@ -38,7 +38,6 @@ namespace RPS_Win
         }
         private void button1_Click(object sender, EventArgs e)
         {
-
             if (radioButton1.Checked == true || radioButton2.Checked == true || radioButton3.Checked == true)
             {
                 Random rand = new Random();
