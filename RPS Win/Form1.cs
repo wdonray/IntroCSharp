@@ -17,25 +17,10 @@ namespace RPS_Win
         {
             InitializeComponent();
         }
-
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        private void radioButton3_CheckedChanged(object sender, EventArgs e) { }
+        private void radioButton2_CheckedChanged(object sender, EventArgs e) { }
+        private void radioButton1_CheckedChanged(object sender, EventArgs e) { }
+        private void richTextBox1_TextChanged(object sender, EventArgs e) { }
         private void button1_Click(object sender, EventArgs e)
         {
             if (radioButton1.Checked == true || radioButton2.Checked == true || radioButton3.Checked == true)
@@ -62,7 +47,7 @@ namespace RPS_Win
                         progressBar1.Value += 25;
                     }
                     games++;
-                    richTextBox2.Text = "Amount of games: " +games.ToString();
+                    richTextBox2.Text = "Amount of games: " + games.ToString();
                 }
                 if (radioButton2.Checked == true)
                 {
