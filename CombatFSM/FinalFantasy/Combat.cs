@@ -18,17 +18,18 @@ namespace CombatFSM.FinalFantasy
         {
 
         }
-        public void addParty(Player a)
+        public void addParty(Party a)
         {
             if (party.Count == 0)
             {
                 party.Add(a);
+                activeParty = party[0];
             }
             else
             {
-
+                party.Add(a);
             }
         }
-        private List<Player> party = new List<Player>();
+        private List<Party> party = new List<Party>();
     }
 }
