@@ -30,8 +30,9 @@ namespace WindowsForms
                 progressBar1.Value = 100;
                 MessageBox.Show("Level Up!");
             }
-            else
-                progressBar1.Value = (int)(Don.Exp / Don.MaxExp) * 50;
+            progressBar1.Value = (int)(((float)Don.Exp / (float)Don.MaxExp) * 100);
+
+
             richTextBox1.Text = "Level " + Don.LevelUp + "\n" + "Exp: " + Don.Exp + "/" + (int)Don.MaxExp;
         }
         public class Player
@@ -50,7 +51,7 @@ namespace WindowsForms
             {
                 m_level++;
                 m_exp -= (int)m_maxExp;
-                m_maxExp =(int)(Math.Pow((double)50, (double)(m_level + 3) / (double)5) + (double)50);
+                m_maxExp = (int)(Math.Pow((double)50, (double)(m_level + 3) / (double)5) + (double)50);
             }
             public int m_exp;
             public int m_level;

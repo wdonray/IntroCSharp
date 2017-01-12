@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fight Gamez", "Fight Gamez\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsForms", "WindowsForms\WindowsForms.csproj", "{B0F8B524-3964-4A8D-9B19-89F8255FD3A6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CombatFSM", "CombatFSM\CombatFSM.csproj", "{7BB1BBEA-7E4D-44DD-9003-5A72F7D429A3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{B0F8B524-3964-4A8D-9B19-89F8255FD3A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0F8B524-3964-4A8D-9B19-89F8255FD3A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0F8B524-3964-4A8D-9B19-89F8255FD3A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BB1BBEA-7E4D-44DD-9003-5A72F7D429A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BB1BBEA-7E4D-44DD-9003-5A72F7D429A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BB1BBEA-7E4D-44DD-9003-5A72F7D429A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BB1BBEA-7E4D-44DD-9003-5A72F7D429A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
