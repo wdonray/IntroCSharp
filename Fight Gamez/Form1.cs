@@ -78,8 +78,6 @@ namespace Fight_Gamez
             User.getPunched();
             test();
         }
-
-
     }
     public class Player
     {
@@ -102,12 +100,12 @@ namespace Fight_Gamez
         public int m_kick;
         public int m_health;
         public int m_stamina;
-       
+        public Random rand = new Random();
+
         public int Punch { get { return m_punch; } }
         public int Kick { get { return m_kick; } }
         public int Health { get { return m_health; } }
         public int Stamina { get { return m_stamina; } }
-        public Random rand = new Random();
-        
+        public Random Rand { get { return rand; } }
     }
 }

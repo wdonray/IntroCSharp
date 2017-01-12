@@ -36,25 +36,25 @@
             // 
             // Raise
             // 
-            this.Raise.Location = new System.Drawing.Point(96, 45);
+            this.Raise.Location = new System.Drawing.Point(77, 40);
             this.Raise.Name = "Raise";
-            this.Raise.Size = new System.Drawing.Size(100, 23);
+            this.Raise.Size = new System.Drawing.Size(134, 34);
             this.Raise.TabIndex = 0;
-            this.Raise.Text = "Raise";
+            this.Raise.Text = "Fight";
             this.Raise.UseVisualStyleBackColor = true;
             this.Raise.Click += new System.EventHandler(this.button1_Click);
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(96, 161);
+            this.progressBar1.Location = new System.Drawing.Point(28, 90);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(100, 23);
+            this.progressBar1.Size = new System.Drawing.Size(244, 23);
             this.progressBar1.TabIndex = 1;
             this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
             // 
             // Lower
             // 
-            this.Lower.Location = new System.Drawing.Point(96, 116);
+            this.Lower.Location = new System.Drawing.Point(2, -1);
             this.Lower.Name = "Lower";
             this.Lower.Size = new System.Drawing.Size(100, 23);
             this.Lower.TabIndex = 2;
@@ -64,9 +64,10 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(96, 190);
+            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.richTextBox1.Location = new System.Drawing.Point(12, 132);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(100, 60);
+            this.richTextBox1.Size = new System.Drawing.Size(260, 118);
             this.richTextBox1.TabIndex = 3;
             this.richTextBox1.Text = "";
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
