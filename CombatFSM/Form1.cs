@@ -17,28 +17,38 @@ namespace CombatFSM
         public Form1()
         {
             InitializeComponent();
-            active.partyOne = new Party();
-            active.partyTwo = new Party();
-            active.partyOne.playaOne = new Player("Cloud");
-            active.partyOne.playaTwo = new Player("Tiffa");
-            active.partyOne.playaThree = new Player("Barrrtt");
-            active.partyTwo.playaOne = new Player("Aeris");
-            active.partyTwo.playaTwo = new Player("Vincent");
-            active.partyTwo.playaThree = new Player("Cait Sith");
+            var a = new Party();
+            var b = new Party();
+            var c = new Player("Cloud");
+            var d = new Player("Tiffa");
+            var e = new Player("Barrrtt");
+            var f = new Player("Aeris");
+            var g = new Player("Vincent");
+            var h = new Player("Cait Sith");
+
+            richTextBox3.Text = "Active Dude: " + active.activeParty.activePlaya.Name;
+
+            richTextBox1.Text = c + "\n\n" + d + "\n\n" + e;
+            richTextBox2.Text = f + "\n\n" + g + "\n\n" + h;
+            // richTextBox2.Text = active.partyTwo.playaOne.Name + "\n\n" + active.partyTwo.playaTwo.Name + "\n\n" + active.partyTwo.playaThree.Name;
         }
         private void richTextBox1_TextChanged(object sender, EventArgs e) { }
         private void richTextBox2_TextChanged(object sender, EventArgs e) { }
-        private void button1_Click(object sender, EventArgs e)
+        private void richTextBox3_TextChanged(object sender, EventArgs e) { }
+        private void button1_Click(object sender, EventArgs e) // States the player attacked the other if defended it states so
         {
-
+            active.nextPlaya();
+            richTextBox3.Text = "Active Dude: " + active.activeParty.activePlaya.Name + "\n";
         }
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e) // Prepares to defend if attacked 
         {
-
+            active.nextPlaya();
+            richTextBox3.Text = "Active Dude: " + active.activeParty.activePlaya.Name + "\n";
         }
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e) // End the turn 
         {
-
+            active.nextPlaya();
+            richTextBox3.Text = "Active Dude: " + active.activeParty.activePlaya.Name + "\n";
         }
     }
 }

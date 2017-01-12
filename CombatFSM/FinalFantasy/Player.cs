@@ -15,5 +15,6 @@ namespace CombatFSM.FinalFantasy
         }
         private string m_name;
         public  string Name {get{ return m_name; }}
+
     }
 }

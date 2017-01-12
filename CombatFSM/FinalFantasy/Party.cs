@@ -11,8 +11,10 @@ namespace CombatFSM.FinalFantasy
     {
         public Party() { }
         public Player activePlaya;
-        public Player playaOne;
-        public Player playaTwo;
-        public Player playaThree;
+        public void addPlaya(Player a)
+        {
+            players.Add(a);
+        }
+        private List<Player> players = new List<Player>();
     }
 }
