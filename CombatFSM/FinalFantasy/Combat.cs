@@ -10,14 +10,6 @@ namespace CombatFSM.FinalFantasy
     {
         public Combat() { }
         public Party activeParty;
-        public void nextParty()
-        {
-
-        }
-        public void nextPlaya()
-        {
-
-        }
         public void addParty(Party a)
         {
             if (party.Count == 0)
@@ -30,6 +22,33 @@ namespace CombatFSM.FinalFantasy
                 party.Add(a);
             }
         }
+        public void addPlaya(Player a, int p)
+        {
+            party[p - 1].addPlaya(a, 0);
+        }
+        public void nextParty()
+        {
+            int i = 0;
+            foreach (Party a in party)
+            {
+                if (a == activeParty)
+                {
+                    activeParty = party[i + 1];
+                    break;
+                }
+                i++;
+            }
+        }
+        public void nextPlaya()
+        {
+            if (activeParty.cannextActivePlaya() == false)
+            {
+                nextParty();
+            }
+            else
+                activeParty.nextActivePlaya();
+        }
+
         private List<Party> party = new List<Party>();
     }
 }

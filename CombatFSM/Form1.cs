@@ -25,12 +25,18 @@ namespace CombatFSM
             var f = new Player("Aeris");
             var g = new Player("Vincent");
             var h = new Player("Cait Sith");
+            active.addParty(a);
+            active.addParty(b);
+            active.addPlaya(c, 1);
+            active.addPlaya(d, 1);
+            active.addPlaya(e, 1);
+            active.addPlaya(f, 2);
+            active.addPlaya(g, 2);
+            active.addPlaya(h, 2);
+            richTextBox3.Text = "Active DudeL: " + active.activeParty.activePlaya.Name;
+            richTextBox1.Text = c.Name + "\n\n" + d.Name + "\n\n" +e.Name ;
+            richTextBox2.Text = f.Name + "\n\n" + g.Name + "\n\n" + h.Name;
 
-            richTextBox3.Text = "Active Dude: " + active.activeParty.activePlaya.Name;
-
-            richTextBox1.Text = c + "\n\n" + d + "\n\n" + e;
-            richTextBox2.Text = f + "\n\n" + g + "\n\n" + h;
-            // richTextBox2.Text = active.partyTwo.playaOne.Name + "\n\n" + active.partyTwo.playaTwo.Name + "\n\n" + active.partyTwo.playaThree.Name;
         }
         private void richTextBox1_TextChanged(object sender, EventArgs e) { }
         private void richTextBox2_TextChanged(object sender, EventArgs e) { }
