@@ -25,16 +25,16 @@ namespace CombatFSM
             var f = new Player("Aeris");
             var g = new Player("Vincent");
             var h = new Player("Cait Sith");
-            active.addParty(a);
-            active.addParty(b);
-            active.addPlaya(c, 1);
-            active.addPlaya(d, 1);
-            active.addPlaya(e, 1);
-            active.addPlaya(f, 2);
-            active.addPlaya(g, 2);
-            active.addPlaya(h, 2);
-            richTextBox3.Text = "Active DudeL: " + active.activeParty.activePlaya.Name;
-            richTextBox1.Text = c.Name + "\n\n" + d.Name + "\n\n" +e.Name ;
+            active.AddParty(a);
+            active.AddParty(b);
+            active.AddPlaya(c, 1);
+            active.AddPlaya(d, 1);
+            active.AddPlaya(e, 1);
+            active.AddPlaya(f, 2);
+            active.AddPlaya(g, 2);
+            active.AddPlaya(h, 2);
+            richTextBox3.Text = "Active Dude: " + active.activeParty.activePlaya.Name;
+            richTextBox1.Text = c.Name + "\n\n" + d.Name + "\n\n" + e.Name;
             richTextBox2.Text = f.Name + "\n\n" + g.Name + "\n\n" + h.Name;
 
         }
@@ -43,17 +43,15 @@ namespace CombatFSM
         private void richTextBox3_TextChanged(object sender, EventArgs e) { }
         private void button1_Click(object sender, EventArgs e) // States the player attacked the other if defended it states so
         {
-            active.nextPlaya();
             richTextBox3.Text = "Active Dude: " + active.activeParty.activePlaya.Name + "\n";
         }
         private void button2_Click(object sender, EventArgs e) // Prepares to defend if attacked 
         {
-            active.nextPlaya();
             richTextBox3.Text = "Active Dude: " + active.activeParty.activePlaya.Name + "\n";
         }
         private void button3_Click(object sender, EventArgs e) // End the turn 
         {
-            active.nextPlaya();
+            active.activeParty.activePlaya.EndTurn();
             richTextBox3.Text = "Active Dude: " + active.activeParty.activePlaya.Name + "\n";
         }
     }
