@@ -48,7 +48,6 @@ namespace CombatFSM.FinalFantasy
             else
                 activeParty.nextActivePlaya();
         }
-
         private List<Party> party = new List<Party>();
     }
 }

@@ -159,6 +159,7 @@
             this.progressBar3.Name = "progressBar3";
             this.progressBar3.Size = new System.Drawing.Size(204, 23);
             this.progressBar3.TabIndex = 51;
+            this.progressBar3.Click += new System.EventHandler(this.progressBar3_Click);
             // 
             // progressBar4
             // 
@@ -169,8 +170,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.ImageLocation = "https://67.media.tumblr.com/76635c9c8b332d68f7ce1e69b89d24fa/tumblr_ob1hb57Qej1s0" +
-    "2vreo1_500.gif";
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.ImageLocation = "";
             this.pictureBox1.Location = new System.Drawing.Point(396, 28);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(461, 307);
