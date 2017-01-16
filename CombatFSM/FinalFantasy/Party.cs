@@ -9,17 +9,10 @@ namespace CombatFSM.FinalFantasy
 {
     class Party
     {
-        public Party()
-        {
-            //foreach (Player p in players)
-            //{
-            //    p.onEndTurn += caPlaya();
-            //}
-        }
+        public Party() { }
         public Player activePlaya;
         public delegate void OnPartyEnd();
         public OnPartyEnd onPartyEnd;
-        
         /// <summary>
         /// Function to set the next player in the list to be the active player
         /// </summary>
@@ -36,27 +29,6 @@ namespace CombatFSM.FinalFantasy
             }
             currentID++;
             activePlaya = players[currentID];
-            //if (CanNextActivePlaya())
-            //{
-            //    int i = 0;
-            //    foreach (Player p in players)
-            //    {
-            //        if (p == activePlaya && i + 1 < players.Count)
-            //        {
-            //            activePlaya = players[i + 1];
-            //            break;
-            //        }
-            //        else if (activePlaya == players[i] && i + 1 >= players.Count)
-            //        {
-            //            activePlaya = players[0];
-            //        }
-            //        i++;
-            //    }
-            //    return;
-            //}
-
-            //activePlaya = players[0];
-            //EndParty();
         }
         /// <summary>
         /// Bool to check if you can go to the next player
@@ -88,10 +60,10 @@ namespace CombatFSM.FinalFantasy
         public void AddPlayer(Player p, int party)
         {
             if (players.Count <= currentID)
-            {   
+            {
+                players.Add(p);
                 activePlaya = players[currentID];
             }
-
             players.Add(p);
             p.onEndTurn += GetNext;
         }
