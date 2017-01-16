@@ -27,10 +27,12 @@ namespace CombatFSM.FinalFantasy
             }
             p.onPartyEnd += NextParty;
         }
+
         public void AddPlaya(Player a, int p)
         {
             party[p - 1].AddPlayer(a, 0);
         }
+
         /// <summary>
         /// Function to go to the next Party
         /// </summary>
@@ -51,18 +53,6 @@ namespace CombatFSM.FinalFantasy
                 i++;
             }
         }
-        /// <summary>
-        /// Function to go to the next player 
-        /// </summary>
-        //public void nextPlaya()
-        //{
-        //    if (activeParty.CanNextActivePlaya() == false)
-        //    {
-        //        nextParty();
-        //    }
-        //    else
-        //        activeParty.NextActivePlaya();
-        //}
         private List<Party> party = new List<Party>();
     }
 }
