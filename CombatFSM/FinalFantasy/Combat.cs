@@ -30,7 +30,7 @@ namespace CombatFSM.FinalFantasy
 
         public void AddPlaya(Player a, int p)
         {
-            party[p - 1].AddPlayer(a, 0);
+            party[p - 1].AddPlayer(a);
         }
 
         /// <summary>

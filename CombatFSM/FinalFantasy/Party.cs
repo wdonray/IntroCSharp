@@ -57,7 +57,7 @@ namespace CombatFSM.FinalFantasy
         /// </summary>
         /// <param name="p"></param>
         /// <param name="party"></param>
-        public void AddPlayer(Player p, int party)
+        public void AddPlayer(Player p)
         {
             if (players.Count <= currentID)
             {
