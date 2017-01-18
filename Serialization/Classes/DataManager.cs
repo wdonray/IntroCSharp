@@ -16,7 +16,8 @@ namespace Serialization.Classes
             XmlSerializer serilaizer = new XmlSerializer(typeof(T));
             if (!File.Exists(@"..\..\" + filename + ".xml"))
             {
-                File.Create(@"..\..\" + filename + ".xml");
+                FileStream work = File.Create(@"..\..\" + filename + ".xml");
+                work.Close();
             }
             TextWriter writter = new StreamWriter(@"..\..\" + filename + ".xml");
             serilaizer.Serialize(writter, data);
