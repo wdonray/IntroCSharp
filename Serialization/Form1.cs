@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using Serialization.Classes;
 
 namespace Serialization
 {
@@ -17,10 +18,23 @@ namespace Serialization
         {
             InitializeComponent();
         }
-
-        private void Form1_Load(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            Student curStudent = new Student(this.textBox1.Text, (int)this.numericUpDown1.Value,this.textBox2.Text);
+            DataManager.Serialize<Student>("Student", curStudent);
         }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Student lastStudent = DataManager.Deserialize<Student>("Student");
+            this.textBox1.Text = lastStudent.NAME;
+            this.numericUpDown1.Value = lastStudent.AGE;
+            this.textBox2.Text = lastStudent.ID;
+        }
+        private void textBox1_TextChanged(object sender, EventArgs e) { }
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e) { }
+        private void textBox2_TextChanged(object sender, EventArgs e) { }
     }
 }
+
+
+
