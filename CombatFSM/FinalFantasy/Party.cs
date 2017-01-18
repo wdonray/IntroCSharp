@@ -63,6 +63,8 @@ namespace CombatFSM.FinalFantasy
             {
                 players.Add(p);
                 activePlaya = players[currentID];
+                p.onEndTurn += GetNext;
+                return;
             }
             players.Add(p);
             p.onEndTurn += GetNext;
