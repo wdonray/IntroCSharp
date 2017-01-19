@@ -4,14 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CombatFSM.FinalFantasy;
+using System.Xml.Serialization;
+using System.IO;
 
 namespace CombatFSM.FinalFantasy
 {
-    class Party
+    public class Party
     {
         public Party() { }
         public Player activePlaya;
         public delegate void OnPartyEnd();
+        [XmlIgnore]
         public OnPartyEnd onPartyEnd;
         /// <summary>
         /// Function to set the next player in the list to be the active player
@@ -68,6 +71,15 @@ namespace CombatFSM.FinalFantasy
             }
             players.Add(p);
             p.onEndTurn += GetNext;
+        }
+        public void Load()
+        {
+            List<Player> temp = new List<Player>();
+            for (int i = 0; i < players.Count; i++)
+            {
+                temp.Add(players[i]);
+            }
+            players = temp;
         }
         private List<Player> players = new List<Player>();
     }

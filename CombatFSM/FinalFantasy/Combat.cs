@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using CombatFSM.FinalFantasy;
 namespace CombatFSM.FinalFantasy
 {
-    class Combat
+    public class Combat
     {
         public Combat() { }
         public Party activeParty;
@@ -53,6 +53,17 @@ namespace CombatFSM.FinalFantasy
                 i++;
             }
         }
+        public void Load()
+        {
+            List<Party> temp = new List<Party>();
+            for (int i = 0; i < party.Count; i++)
+            {
+                temp.Add(party[i]);
+                temp[i].Load();
+            }
+            party = temp;
+        }
+        
         private List<Party> party = new List<Party>();
     }
 }

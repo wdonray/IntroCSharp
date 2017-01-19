@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FinalFantasy\Combat.cs" />
+    <Compile Include="FinalFantasy\DataMananger.cs" />
     <Compile Include="FinalFantasy\Party.cs" />
     <Compile Include="FinalFantasy\Player.cs" />
     <Compile Include="Form1.cs">
