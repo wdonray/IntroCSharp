@@ -23,18 +23,21 @@ namespace Fight_Gamez.Classes
             m_maxExp = 50;
             m_maxhealth = 100;
         }
+
         public void Punch(Player Playa, Random rand)
         {
             this.m_dmg = rand.Next(5, 21);
             Playa.m_health -= m_dmg;
             Playa.m_stamina -= 5;
         }
+
         public void Kicked(Player Playa, Random rand)
         {
             this.m_dmg = rand.Next(5, 26);
             Playa.m_health -= m_dmg;
             Playa.m_stamina -= 10;
         }
+
         /// <summary>
         /// This is a Heal Function
         /// </summary>
@@ -50,10 +53,12 @@ namespace Fight_Gamez.Classes
             else
                 MessageBox.Show("You are Max HP are too close to waste stamina");
         }
+
         public void addExp(int exp)
         {
             m_exp += exp;
         }
+
         public void levelUp()
         {
             m_level++;
@@ -62,6 +67,7 @@ namespace Fight_Gamez.Classes
             m_health -= (int)m_maxhealth;
             m_health = (int)(Math.Pow((double)100, (double)(m_level + 1) / (double)5) + (double)100);
         }
+
         public int m_punch;
         public int m_kick;
         public int m_health;
@@ -79,7 +85,5 @@ namespace Fight_Gamez.Classes
         public int Exp { get { return m_exp; } }
         public int MaxExp { get { return m_maxExp; } }
         public int LevelUp { get { return m_level; } }
-
-
     }
 }

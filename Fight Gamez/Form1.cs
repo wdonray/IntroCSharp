@@ -14,12 +14,13 @@ namespace Fight_Gamez
     public partial class Form1 : Form
     {
         Random rand = new Random();
+
         void winCheck()
         {
             if (Bad.Health >= 0 && User.Health >= 0)
             {
                 progressBar2.Value = Bad.Health;
-                progressBar1.Value = (int)(((float)User.m_health / (float)User.m_maxhealth) * 100); ;
+                progressBar1.Value = (int)(((float)User.m_health / (float)User.m_maxhealth) * 100);
             }
             else
             {
@@ -39,11 +40,13 @@ namespace Fight_Gamez
                     Bad.m_health = 100;
                     progressBar2.Value = 100;
                     User.addExp(rand.Next(20, 51));
+         
                     if (User.Exp >= User.MaxExp)
                     {
                         User.levelUp();
                         progressBar3.Value = 100;
                     }
+
                     progressBar3.Value = (int)(((float)User.Exp / (float)User.MaxExp) * 100);
                     textBox2.Text = "EXP: " + User.Exp + "/" + User.MaxExp;
                     textBox4.Text = "Level " + User.LevelUp;
@@ -51,19 +54,23 @@ namespace Fight_Gamez
                 }
             }
         }
+
         void textHP()
         {
             textBox1.Text = "HP: "+ User.m_health.ToString();
             textBox3.Text = "HP:" + Bad.m_health.ToString();
         }
+
         public Player User;
         public Player Bad;
+
         public Form1()
         {
             InitializeComponent();
             User = new Player(rand);
             Bad = new Player(rand);
         }
+
         private void You_TextChanged(object sender, EventArgs e) { }
         private void Enemy_TextChanged(object sender, EventArgs e) { }
         private void progressBar1_Click(object sender, EventArgs e) { }
@@ -85,6 +92,7 @@ namespace Fight_Gamez
             textHP();
             winCheck();
         }
+
         private void button2_Click(object sender, EventArgs e)
         {
             Bad.Kicked(User, rand);
@@ -94,6 +102,7 @@ namespace Fight_Gamez
             textHP();
             winCheck();
         }
+
         private void button3_Click(object sender, EventArgs e)
         {
             User.Heal(rand);
@@ -101,6 +110,7 @@ namespace Fight_Gamez
             textBox1.Text = "HP: " + User.m_health.ToString();
             winCheck();
         }
+
         private void button4_Click(object sender, EventArgs e)
         {
             Random flee = new Random();
@@ -114,5 +124,4 @@ namespace Fight_Gamez
             winCheck();
         }
     }
-    
 }
