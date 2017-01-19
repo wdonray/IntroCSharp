@@ -72,15 +72,6 @@ namespace CombatFSM.FinalFantasy
             players.Add(p);
             p.onEndTurn += GetNext;
         }
-        public void Load()
-        {
-            List<Player> temp = new List<Player>();
-            for (int i = 0; i < players.Count; i++)
-            {
-                temp.Add(players[i]);
-            }
-            players = temp;
-        }
         private List<Player> players = new List<Player>();
     }
 }

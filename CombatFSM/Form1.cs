@@ -58,13 +58,13 @@ namespace CombatFSM
         private void Save_Click(object sender, EventArgs e)
         {
             DataManager<Combat>.Serialize("Player", ref active);
+
         }
 
         private void Load_Click(object sender, EventArgs e)
         {
             active = DataManager<Combat>.Deserialize("Player");
-            active.Load();
-            this.richTextBox3.Text = "Active Dude: " + active + "\n";
+            this.richTextBox3.Text = "Active Dude: " + active.activeParty.activePlaya.Name + "\n";
         }
     }
 }
