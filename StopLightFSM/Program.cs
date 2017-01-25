@@ -57,12 +57,7 @@ namespace FSMExample
         }
         public bool AddState(State state)
         {
-            if(transitions.Count==0)
-            {
-                transitions.Add(state.name, new List<State>());
-                return true;
-            }
-            else if (transitions.ContainsKey(state.name) == null)
+            if (transitions[state.name] == null)
             {
                 transitions.Add(state.name, new List<State>());
                 return true;
