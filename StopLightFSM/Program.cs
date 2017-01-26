@@ -82,29 +82,20 @@ namespace FSMExample
 
             State c = new State(a as Enum);
             State s = new State(b as Enum);
-
-
-
+            List<State> tmp = new List<State>();
+            tmp.Add(c);
+            tmp.Add(s);
+            transitions.Add(transitions.Count.ToString(), tmp);
             return true;
         }
         public State GetState(T e)
         {
+            State s = new State(e as Enum);
             string key = (e as State).name;
             return states[key];
         }
         private Dictionary<string, List<State>> transitions = new Dictionary<string, List<State>>();
-        private bool isValidTransition(State to)
-        {
-            var validStates = transitions[cState.name];
-            if (validStates == null)
-                return false;
-            foreach (var state in validStates)
-            {
-                if (state == to)
-                    return true;
-            }
-            return false;
-        }
+      
         public bool Start() { return true; }
 
         public bool Update() { return true; }
@@ -142,6 +133,8 @@ namespace FSMExample
             trafficFSM.AddTransition(LightState.YELLOW, LightState.RED);
 
             trafficFSM.GetState(LightState.RED).AddEnterFunction((Handler)LightBehaviour.RedLightBehaviour);
+            trafficFSM.GetState(LightState.GREEN).AddEnterFunction((Handler)LightBehaviour.GreenLightBehaviour);
+            trafficFSM.GetState(LightState.YELLOW).AddEnterFunction((Handler)LightBehaviour.YellowLightBehaviour);
 
             trafficFSM.Start();
 
