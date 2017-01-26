@@ -57,9 +57,14 @@ namespace FSMExample
         }
         public bool AddState(State state)
         {
-            if (transitions[state.name] == null)
+            if (states.Count == 0)
             {
-                transitions.Add(state.name, new List<State>());
+                states.Add(state.name, state);
+                return true;
+            }
+            else if (states.ContainsKey(state.name) == false)
+            {
+                states.Add(state.name, state);
                 return true;
             }
             return false;
@@ -74,8 +79,11 @@ namespace FSMExample
             //usage would be fsm.AddTransition(init, idle)
 
             //access the transitions for the state
-            State s = a as State;
-            var tmp = transitions[s.name];
+
+            State c = new State(a as Enum);
+            State s = new State(b as Enum);
+
+
 
             return true;
         }
