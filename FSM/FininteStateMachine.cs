@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
+using System.Threading;
 
 namespace FSM
 {
@@ -11,7 +13,18 @@ namespace FSM
         private State currentState;
         private Dictionary<string, State> states;
         private Dictionary<string, List<State>> transitions = new Dictionary<string, List<State>>();
-        public FiniteStateMachine() { }
+        public FiniteStateMachine()
+        {
+            states = new Dictionary<string, State>(); //Ability to know when this happens
+            transitions = new Dictionary<string, List<State>>();
+
+            //var values = Enum.GetValues(typeof(T));
+            //foreach(var v in values)
+            //{
+            //    State s = new State(v as Enum);
+            //    states.Add(s.Name, s);
+            //}
+        }
         public void AddState(Enum e)
         {
             State s = new State(e);
@@ -20,13 +33,13 @@ namespace FSM
         /// <summary>
         /// Takes in two states as enums and adds them on to a list 
         /// </summary>
-        /// <param name="a"></param>
-        /// <param name="b"></param>
+        /// <param name="from"></param>
+        /// <param name="to"></param>
         /// <returns></returns>
-        public bool AddTransition(T a, T b)
+        public bool AddTransition<V>(V from, V to)
         {
-            State s1 = new State(a as Enum);
-            State s2 = new State(b as Enum);
+            State s1 = new State(from as Enum);
+            State s2 = new State(to as Enum);
             List<State> tmp = new List<State>();
             tmp.Add(s1);
             tmp.Add(s2);
@@ -37,31 +50,57 @@ namespace FSM
         /// Takes in a state and sets it as the current state
         /// </summary>
         /// <param name="state"></param>
-        public void Start(T state)
+        public void Start<V>(V state)
         {
-            string name = (state as Enum).ToString();
-            currentState = states[name];
+            if (states.ContainsKey("INIT"))
+                currentState = states["INIT"];
+            else
+                currentState = states.ElementAt(0).Value;
+        }
+        public void Update ()
+        {
+            Stopwatch stopWatch = new Stopwatch();
+            stopWatch.Start();
+
+            Thread.Sleep(1001);
+
+            TimeSpan ts = stopWatch.Elapsed;
+            //if (FSM. == Light.INIT)
+            //{
+
+            //}
+
+            Console.WriteLine("RunTime " + ts.Seconds);
+
+            stopWatch.Stop();
+        }
+        public void Exit ()
+        {
+
         }
         /// <summary>
         /// Sets the current state to the next state and invokes the exit and enter
         /// </summary>
         /// <param name="state"></param>
-        public void ChangeState(T state)
+        public void ChangeState<V>(V state)
         {
             string key = currentState.ToString() + "->" + (state as Enum).ToString();
-            if (transitions[key] != null)
+            string newState = (state as Enum).ToString();
+            if (transitions.ContainsKey(key) != false)
             {
-                currentState.onExit.Invoke();
-                currentState = states[(state as Enum).ToString()];
-                currentState.onEnter.Invoke();
+                Console.WriteLine("Invalid" + key);
+                return;
             }
+            currentState.onExit.Invoke();
+            currentState = states[newState];
+            currentState.onEnter.Invoke();
         }
         /// <summary>
         /// 
         /// </summary>
         /// <param name="e"></param>
         /// <returns></returns>
-        public State GetState(T e)
+        public State GetState<V>(V e)
         {
             State s = new State(e as Enum);
             string key = (s).Name;

@@ -20,31 +20,20 @@ namespace Dictionary
     {
         static void Main(string[] args)
         {
-            Dictionary<int, Student> dictionary = new Dictionary<int, Student>()
+            Dictionary<string, Student> dictionary = new Dictionary<string, Student>()
             {
-                { 1, new Student("Donray") },
-                { 2, new Student("Max") },
-                { 3, new Student("Trent") },
-                { 4, new Student("Rory") },
-                { 5, new Student("Guy") },
-                { 6, new Student("Ben") },
+                { "Donray", new Student("Donray") },
+                //{ 2, new Student("Max") },
+                //{ 3, new Student("Trent") },
+                //{ 4, new Student("Rory") },
+                //{ 5, new Student("Guy") },
+                //{ 6, new Student("Ben") },
             };
-            Dictionary<string, int> d = new Dictionary<string, int>()
-            {
-                {"Max", 1 },
-                {"Donray", 2 },
-                {"Trent", 3 },
-                {"Dylan", 4 },
-            };
-            var list = new List<string>(d.Keys);
             var list2 = new List<Student>(); ;
-            foreach (string s in list)
-            {
-                Console.WriteLine(s, d[s]);
-            }
             foreach (Student s in list2)
             {
-                Console.WriteLine(dictionary[s].m_name);
+                dictionary.Add(s.m_name, s);
+                Console.Write(s.m_name);
             }
             Console.Read();
 
