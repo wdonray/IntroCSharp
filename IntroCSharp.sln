@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegates", "Delegates\Dele
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FSM", "FSM\FSM.csproj", "{FD57964D-3173-4257-ADDE-A0147E5304E2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetterInterfaces", "BetterInterfaces\BetterInterfaces.csproj", "{C2395168-1AD5-4BA7-AC3D-B9C2C8F233D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +119,10 @@ Global
 		{FD57964D-3173-4257-ADDE-A0147E5304E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD57964D-3173-4257-ADDE-A0147E5304E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD57964D-3173-4257-ADDE-A0147E5304E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2395168-1AD5-4BA7-AC3D-B9C2C8F233D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2395168-1AD5-4BA7-AC3D-B9C2C8F233D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2395168-1AD5-4BA7-AC3D-B9C2C8F233D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2395168-1AD5-4BA7-AC3D-B9C2C8F233D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
